@@ -15,6 +15,8 @@ await mkdirp(resolve(_dirname, 'exports'));
 
 const favicon = resolve(_dirname, 'favicon.ico');
 const faviconPng = resolve(_dirname, 'exports', 'favicon.png');
+const bmp = resolve(_dirname, 'test.bmp');
+const bmpPng = resolve(_dirname, 'exports', 'test.bmp.png');
 
 describe('test', () => {
     test('check file-type works', async () => {
@@ -50,5 +52,18 @@ describe('test', () => {
         const sharpCtx = await sharpBmp(faviconPng, type.mime);
         expect(sharpCtx).toBeTruthy();
         expect((await sharpCtx.metadata()).format).toBe('png');
+    });
+    test('test.bmp', async () => {
+        const type = await fileTypeFromFile(bmp);
+        if (!type) throw new Error('file type not found');
+        const sharpCtx = await sharpBmp(bmp, type.mime);
+        const metadata = await sharpCtx.metadata();
+        expect(metadata.format).toBe('raw');
+        expect(metadata.width).toBe(640);
+        expect(metadata.height).toBe(360);
+
+        await sharpCtx.png().toFile(bmpPng);
+        const pngType = await fileTypeFromFile(bmpPng);
+        expect(pngType?.mime).toBe('image/png');
     });
 });
