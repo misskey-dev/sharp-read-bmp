@@ -1,5 +1,5 @@
 {
-  "name": "sharp-read-bmp",
+  "name": "@misskey-dev/sharp-read-bmp",
   "version": "1.0.0",
   "description": "",
   "main": "built/index.js",
