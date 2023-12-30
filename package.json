@@ -1,7 +1,13 @@
 {
   "name": "@misskey-dev/sharp-read-bmp",
-  "version": "1.1.0",
-  "description": "",
+  "version": "1.1.1",
+  "description": "Function for reading bmp and ico and returning a sharp instance",
+  "type": "module",
+  "keywords": [],
+  "author": "tamaina <tamaina@hotmail.co.jp>",
+  "license": "ISC",
+  "repository": "https://github.com/misskey-dev/sharp-read-bmp.git",
+  "bugs": "https://github.com/misskey-dev/sharp-read-bmp/issues",
   "main": "built/index.js",
   "types": "built/index.d.ts",
   "scripts": {
@@ -13,10 +19,6 @@
     "built",
     "LICENSE"
   ],
-  "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "decode-bmp": "^0.2.1",
     "decode-ico": "^0.4.1",
