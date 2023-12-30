@@ -19,4 +19,3 @@ const sharpCtx = await sharpBmp('favicon.ico', mime);
 
 console.log(await sharpCtx.metadata());
 ```
-c
