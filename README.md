@@ -4,7 +4,7 @@ Function for reading bmp and ico and returning a sharp instance
 Installation
 ----------------------------------------------------------------
 ```
-npm install git+https://github.com/misskey-dev/sharp-read-bmp.git
+npm install @misskey-dev/sharp-read-bmp
 ```
 
 Usage
@@ -19,3 +19,4 @@ const sharpCtx = await sharpBmp('favicon.ico', mime);
 
 console.log(await sharpCtx.metadata());
 ```
+c
