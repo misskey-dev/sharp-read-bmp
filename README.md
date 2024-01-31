@@ -14,7 +14,7 @@ Usage
 ----------------------------------------------------------------
 
 ```javascript
-import { sharpBmp } from 'sharp-read-bmp';
+import { sharpBmp } from '@misskey-dev/sharp-read-bmp';
 import { fileTypeFromFile } from 'file-type';
 
 const { mime } = await fileTypeFromFile('favicon.ico');
