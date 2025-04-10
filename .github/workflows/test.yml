@@ -13,10 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install pnpm
-        uses: pnpm/action-setup@v2
-        with:
-          version: 8
-          run_install: false
+        uses: pnpm/action-setup@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
@@ -24,7 +21,6 @@ jobs:
           cache: 'pnpm'
       - name: Install
         run: |
-          corepack enable
           pnpm i --frozen-lockfile
       - name: Build
         run: |
