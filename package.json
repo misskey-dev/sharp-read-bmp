@@ -12,7 +12,7 @@
   "types": "built/index.d.ts",
   "scripts": {
     "eslint": "eslint --quiet \"src/**/*.ts\"",
-    "test": "vitest run test/index.ts",
+    "test": "vitest run test/index.test.ts",
     "build": "tsc"
   },
   "files": [
