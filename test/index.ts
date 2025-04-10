@@ -1,9 +1,9 @@
 import { sharpBmp } from '../src';
-import { fileTypeFromFile, fileTypeFromBuffer } from 'file-type';
+import { fileTypeFromFile } from 'file-type';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { readFile } from 'node:fs/promises';
-import {expect, jest, test, describe} from '@jest/globals';
+import {expect, test, describe} from 'vitest';
 import { rimraf } from 'rimraf';
 import { mkdirp } from 'mkdirp';
 
