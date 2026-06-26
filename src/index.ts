@@ -1,4 +1,5 @@
 import sharp from 'sharp';
+import type { Sharp, SharpOptions } from 'sharp';
 import decodeIco from 'decode-ico';
 import decodeBmp from 'decode-bmp';
 import { readFile } from 'node:fs/promises';
@@ -6,8 +7,8 @@ import { readFile } from 'node:fs/promises';
 export async function sharpBmp(
     source: Buffer | Int8Array | Uint8Array | Uint8ClampedArray | string,
     type: string,
-    options: sharp.SharpOptions = {}
-): Promise<sharp.Sharp> {
+    options: SharpOptions = {}
+): Promise<Sharp> {
     if (type === 'image/x-icon' || type === 'image/vnd.microsoft.icon') {
         const icon = decodeIco(typeof source === 'string' ? await readFile(source, { encoding: null }) : source);
 

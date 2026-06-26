@@ -11,7 +11,7 @@
 		"sourceMap": false,
 		"target": "es2021",
 		"module": "esnext",
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"allowSyntheticDefaultImports": true,
 		"removeComments": false,
 		"noLib": false,
@@ -24,7 +24,6 @@
 		"resolveJsonModule": true,
 		"isolatedModules": true,
 		"rootDir": "./src",
-		"baseUrl": "./",
 		"paths": {
 			"@/*": [
 				"./src/*"
