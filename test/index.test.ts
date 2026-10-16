@@ -2,16 +2,14 @@ import { sharpBmp } from '../src';
 import { fileTypeFromFile } from 'file-type';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { readFile } from 'node:fs/promises';
+import { mkdir, readFile, rm } from 'node:fs/promises';
 import {expect, test, describe} from 'vitest';
-import { rimraf } from 'rimraf';
-import { mkdirp } from 'mkdirp';
 
 const _filename = fileURLToPath(import.meta.url);
 const _dirname = dirname(_filename);
 
-await rimraf(resolve(_dirname, 'exports'));
-await mkdirp(resolve(_dirname, 'exports'));
+await rm(resolve(_dirname, 'exports'), { recursive: true, force: true });
+await mkdir(resolve(_dirname, 'exports'), { recursive: true });
 
 const favicon = resolve(_dirname, 'favicon.ico');
 const faviconPng = resolve(_dirname, 'exports', 'favicon.png');
