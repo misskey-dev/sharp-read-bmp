@@ -5,7 +5,6 @@ export default defineMisskeyDevOxlintConfig({
 		ignorePatterns: [
 			'**/node_modules',
 			'built',
-			'test',
 		],
 	},
 });
