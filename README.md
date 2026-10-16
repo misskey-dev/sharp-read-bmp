@@ -7,8 +7,10 @@ Function for reading bmp and ico and returning a sharp instance
 Installation
 ----------------------------------------------------------------
 ```
-npm install @misskey-dev/sharp-read-bmp
+npm install @misskey-dev/sharp-read-bmp sharp
 ```
+
+[sharp](https://www.npmjs.com/package/sharp) is a peer dependency, so make sure to install it alongside `@misskey-dev/sharp-read-bmp`.
 
 Usage
 ----------------------------------------------------------------
